@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" version="1.0.0">
+  <sld:NamedLayer>
+    <sld:Name>land_cover</sld:Name>
+    <sld:UserStyle>
+      <sld:Name>land_cover</sld:Name>
+      <sld:FeatureTypeStyle>
+        <sld:Name>name</sld:Name>
+        <Transformation>
+  <ogc:Function name="gs:CropCoverage">
+        <ogc:Function name="parameter">
+          <ogc:Literal>coverage</ogc:Literal>
+        </ogc:Function>
+        <ogc:Function name="parameter">
+          <ogc:Literal>cropShape</ogc:Literal>
+          <ogc:Literal>{{wkt_polygon2}}
+          </ogc:Literal>
+        </ogc:Function>
+  </ogc:Function>
+  </Transformation>
+<sld:Rule>
+          <sld:RasterSymbolizer>
+            <sld:ChannelSelection>
+              <sld:GrayChannel>
+                <sld:SourceChannelName>1</sld:SourceChannelName>
+              </sld:GrayChannel>
+            </sld:ChannelSelection>
+            <sld:ColorMap extended="true" type="ramp">
+              <sld:ColorMapEntry quantity="-2.0" color="#f60501" label="-0.5790"/>
+              <sld:ColorMapEntry quantity="-0.57348751900586004" color="#f60702" label="-0.5735"/>
+              <sld:ColorMapEntry quantity="-0.56795337968750004" color="#f60803" label="-0.5680"/>
+              <sld:ColorMapEntry quantity="-0.56241909869336004" color="#f60a04" label="-0.5624"/>
+              <sld:ColorMapEntry quantity="-0.55688495937500004" color="#f60c05" label="-0.5569"/>
+              <sld:ColorMapEntry quantity="-0.55135067838086005" color="#f60d06" label="-0.5514"/>
+              <sld:ColorMapEntry quantity="-0.54581653906250005" color="#f60f07" label="-0.5458"/>
+              <sld:ColorMapEntry quantity="-0.54028225806836006" color="#f61109" label="-0.5403"/>
+              <sld:ColorMapEntry quantity="-0.53474811875000006" color="#f6130a" label="-0.5347"/>
+              <sld:ColorMapEntry quantity="-0.52921383775586006" color="#f6140b" label="-0.5292"/>
+              <sld:ColorMapEntry quantity="-0.52367969843750006" color="#f6160c" label="-0.5237"/>
+              <sld:ColorMapEntry quantity="-0.51814541744336007" color="#f7180d" label="-0.5181"/>
+              <sld:ColorMapEntry quantity="-0.51261127812500007" color="#f7190e" label="-0.5126"/>
+              <sld:ColorMapEntry quantity="-0.50707699713085996" color="#f71b0f" label="-0.5071"/>
+              <sld:ColorMapEntry quantity="-0.50154285781250008" color="#f71d10" label="-0.5015"/>
+              <sld:ColorMapEntry quantity="-0.49600857681836003" color="#f71e11" label="-0.4960"/>
+              <sld:ColorMapEntry quantity="-0.49047443750000003" color="#f72012" label="-0.4905"/>
+              <sld:ColorMapEntry quantity="-0.48494015650586003" color="#f72213" label="-0.4849"/>
+              <sld:ColorMapEntry quantity="-0.47940601718750003" color="#f72414" label="-0.4794"/>
+              <sld:ColorMapEntry quantity="-0.47387173619336004" color="#f72515" label="-0.4739"/>
+              <sld:ColorMapEntry quantity="-0.46833759687500004" color="#f72717" label="-0.4683"/>
+              <sld:ColorMapEntry quantity="-0.46280331588085999" color="#f72918" label="-0.4628"/>
+              <sld:ColorMapEntry quantity="-0.45726917656249999" color="#f72a19" label="-0.4573"/>
+              <sld:ColorMapEntry quantity="-0.45173489556836" color="#f72c1a" label="-0.4517"/>
+              <sld:ColorMapEntry quantity="-0.44620075625" color="#f72e1b" label="-0.4462"/>
+              <sld:ColorMapEntry quantity="-0.44066647525586" color="#f72f1c" label="-0.4407"/>
+              <sld:ColorMapEntry quantity="-0.43513162755860002" color="#f7311d" label="-0.4351"/>
+              <sld:ColorMapEntry quantity="-0.42959777159180002" color="#f7331e" label="-0.4296"/>
+              <sld:ColorMapEntry quantity="-0.42406391562500001" color="#f7341f" label="-0.4241"/>
+              <sld:ColorMapEntry quantity="-0.4185300596582" color="#f73620" label="-0.4185"/>
+              <sld:ColorMapEntry quantity="-0.41299478693360003" color="#f73821" label="-0.4130"/>
+              <sld:ColorMapEntry quantity="-0.40746093096680003" color="#f73a22" label="-0.4075"/>
+              <sld:ColorMapEntry quantity="-0.40192707500000002" color="#f73b23" label="-0.4019"/>
+              <sld:ColorMapEntry quantity="-0.39639321903320002" color="#f83d24" label="-0.3964"/>
+              <sld:ColorMapEntry quantity="-0.39085794630860005" color="#f83f26" label="-0.3909"/>
+              <sld:ColorMapEntry quantity="-0.38532409034180004" color="#f84027" label="-0.3853"/>
+              <sld:ColorMapEntry quantity="-0.37979023437500004" color="#f84228" label="-0.3798"/>
+              <sld:ColorMapEntry quantity="-0.37425637840820003" color="#f84429" label="-0.3743"/>
+              <sld:ColorMapEntry quantity="-0.36872110568360006" color="#f8452a" label="-0.3687"/>
+              <sld:ColorMapEntry quantity="-0.3631872497168" color="#f8472b" label="-0.3632"/>
+              <sld:ColorMapEntry quantity="-0.35765339375000005" color="#f8492c" label="-0.3577"/>
+              <sld:ColorMapEntry quantity="-0.35211953778320004" color="#f84b2d" label="-0.3521"/>
+              <sld:ColorMapEntry quantity="-0.34658426505860007" color="#f84c2e" label="-0.3466"/>
+              <sld:ColorMapEntry quantity="-0.34105040909180001" color="#f84e2f" label="-0.3411"/>
+              <sld:ColorMapEntry quantity="-0.33551655312500001" color="#f85030" label="-0.3355"/>
+              <sld:ColorMapEntry quantity="-0.32998269715820006" color="#f85131" label="-0.3300"/>
+              <sld:ColorMapEntry quantity="-0.32444742443360003" color="#f85332" label="-0.3244"/>
+              <sld:ColorMapEntry quantity="-0.31891356846680002" color="#f85534" label="-0.3189"/>
+              <sld:ColorMapEntry quantity="-0.31337971250000002" color="#f85635" label="-0.3134"/>
+              <sld:ColorMapEntry quantity="-0.30784585653320001" color="#f85836" label="-0.3078"/>
+              <sld:ColorMapEntry quantity="-0.30231058380860004" color="#f85a37" label="-0.3023"/>
+              <sld:ColorMapEntry quantity="-0.29677672784179998" color="#f85b38" label="-0.2968"/>
+              <sld:ColorMapEntry quantity="-0.29124287187500003" color="#f85d39" label="-0.2912"/>
+              <sld:ColorMapEntry quantity="-0.28570901590820003" color="#f85f3a" label="-0.2857"/>
+              <sld:ColorMapEntry quantity="-0.28017374318360005" color="#f8613b" label="-0.2802"/>
+              <sld:ColorMapEntry quantity="-0.27463988721679999" color="#f9623c" label="-0.2746"/>
+              <sld:ColorMapEntry quantity="-0.26910603124999999" color="#f9643d" label="-0.2691"/>
+              <sld:ColorMapEntry quantity="-0.26357217528320004" color="#f9663e" label="-0.2636"/>
+              <sld:ColorMapEntry quantity="-0.25803690255860001" color="#f9673f" label="-0.2580"/>
+              <sld:ColorMapEntry quantity="-0.25250304659180001" color="#f96940" label="-0.2525"/>
+              <sld:ColorMapEntry quantity="-0.246969190625" color="#f96b42" label="-0.2470"/>
+              <sld:ColorMapEntry quantity="-0.24143533465820005" color="#f96c43" label="-0.2414"/>
+              <sld:ColorMapEntry quantity="-0.23590006193360002" color="#f96e44" label="-0.2359"/>
+              <sld:ColorMapEntry quantity="-0.23036620596680002" color="#f97045" label="-0.2304"/>
+              <sld:ColorMapEntry quantity="-0.22483235000000001" color="#f97246" label="-0.2248"/>
+              <sld:ColorMapEntry quantity="-0.21929849403320001" color="#f97347" label="-0.2193"/>
+              <sld:ColorMapEntry quantity="-0.21376322130859998" color="#f97548" label="-0.2138"/>
+              <sld:ColorMapEntry quantity="-0.20822936534180003" color="#f97749" label="-0.2082"/>
+              <sld:ColorMapEntry quantity="-0.20269550937500003" color="#f9784a" label="-0.2027"/>
+              <sld:ColorMapEntry quantity="-0.19716165340819997" color="#f97a4b" label="-0.1972"/>
+              <sld:ColorMapEntry quantity="-0.19162638068359999" color="#f97c4c" label="-0.1916"/>
+              <sld:ColorMapEntry quantity="-0.18609252471680005" color="#f97d4d" label="-0.1861"/>
+              <sld:ColorMapEntry quantity="-0.18055866875000004" color="#f97f4e" label="-0.1806"/>
+              <sld:ColorMapEntry quantity="-0.17502481278319998" color="#f98150" label="-0.1750"/>
+              <sld:ColorMapEntry quantity="-0.16948954005860001" color="#f98251" label="-0.1695"/>
+              <sld:ColorMapEntry quantity="-0.16395568409180006" color="#f98452" label="-0.1640"/>
+              <sld:ColorMapEntry quantity="-0.158421828125" color="#f98653" label="-0.1584"/>
+              <sld:ColorMapEntry quantity="-0.15288797215819999" color="#fa8854" label="-0.1529"/>
+              <sld:ColorMapEntry quantity="-0.14735269943359997" color="#fa8955" label="-0.1474"/>
+              <sld:ColorMapEntry quantity="-0.14181884346680002" color="#fa8b56" label="-0.1418"/>
+              <sld:ColorMapEntry quantity="-0.13628498750000001" color="#fa8d57" label="-0.1363"/>
+              <sld:ColorMapEntry quantity="-0.1307511315332" color="#fa8e58" label="-0.1308"/>
+              <sld:ColorMapEntry quantity="-0.12521585880859998" color="#fa9059" label="-0.1252"/>
+              <sld:ColorMapEntry quantity="-0.11968200284180003" color="#fa925a" label="-0.1197"/>
+              <sld:ColorMapEntry quantity="-0.11414814687500002" color="#fa935b" label="-0.1141"/>
+              <sld:ColorMapEntry quantity="-0.10861429090819996" color="#fa955c" label="-0.1086"/>
+              <sld:ColorMapEntry quantity="-0.10307901818359999" color="#fa975d" label="-0.1031"/>
+              <sld:ColorMapEntry quantity="-0.097545162216800041" color="#fa985f" label="-0.0975"/>
+              <sld:ColorMapEntry quantity="-0.09201130624999998" color="#fa9a60" label="-0.0920"/>
+              <sld:ColorMapEntry quantity="-0.086477450283199975" color="#fa9c61" label="-0.0865"/>
+              <sld:ColorMapEntry quantity="-0.080942177558600004" color="#fa9e62" label="-0.0809"/>
+              <sld:ColorMapEntry quantity="-0.075408321591799998" color="#fa9f63" label="-0.0754"/>
+              <sld:ColorMapEntry quantity="-0.069874465624999993" color="#faa164" label="-0.0699"/>
+              <sld:ColorMapEntry quantity="-0.064340609658199988" color="#faa365" label="-0.0643"/>
+              <sld:ColorMapEntry quantity="-0.058805336933600016" color="#faa466" label="-0.0588"/>
+              <sld:ColorMapEntry quantity="-0.053271480966800011" color="#faa667" label="-0.0533"/>
+              <sld:ColorMapEntry quantity="-0.047737625000000006" color="#faa868" label="-0.0477"/>
+              <sld:ColorMapEntry quantity="-0.0422037690332" color="#faa969" label="-0.0422"/>
+              <sld:ColorMapEntry quantity="-0.036668496308600029" color="#fbab6a" label="-0.0367"/>
+              <sld:ColorMapEntry quantity="-0.031134640341800024" color="#fbad6b" label="-0.0311"/>
+              <sld:ColorMapEntry quantity="-0.025600784375000019" color="#fbaf6d" label="-0.0256"/>
+              <sld:ColorMapEntry quantity="-0.020066928408200013" color="#fbb06e" label="-0.0201"/>
+              <sld:ColorMapEntry quantity="-0.014531655683599931" color="#fbb26f" label="-0.0145"/>
+              <sld:ColorMapEntry quantity="-0.0089977997168000368" color="#fbb470" label="-0.0090"/>
+              <sld:ColorMapEntry quantity="-0.0034639437500000314" color="#fbb571" label="-0.0035"/>
+              <sld:ColorMapEntry quantity="0.0020699122167999739" color="#fbb772" label="0.0021"/>
+              <sld:ColorMapEntry quantity="0.0076051849414000561" color="#fbb973" label="0.0076"/>
+              <sld:ColorMapEntry quantity="0.01313904090819995" color="#fbba74" label="0.0131"/>
+              <sld:ColorMapEntry quantity="0.018672896874999956" color="#fbbc75" label="0.0187"/>
+              <sld:ColorMapEntry quantity="0.024206752841800072" color="#fbbe76" label="0.0242"/>
+              <sld:ColorMapEntry quantity="0.029742025566400043" color="#fbbf77" label="0.0297"/>
+              <sld:ColorMapEntry quantity="0.035275881533199938" color="#fbc178" label="0.0353"/>
+              <sld:ColorMapEntry quantity="0.040809737500000054" color="#fbc379" label="0.0408"/>
+              <sld:ColorMapEntry quantity="0.046343593466800059" color="#fbc57b" label="0.0463"/>
+              <sld:ColorMapEntry quantity="0.05187886619140003" color="#fbc67c" label="0.0519"/>
+              <sld:ColorMapEntry quantity="0.057412722158199925" color="#fbc87d" label="0.0574"/>
+              <sld:ColorMapEntry quantity="0.062946578125000041" color="#fbca7e" label="0.0629"/>
+              <sld:ColorMapEntry quantity="0.068480434091800046" color="#fbcb7f" label="0.0685"/>
+              <sld:ColorMapEntry quantity="0.074015706816400018" color="#fbcd80" label="0.0740"/>
+              <sld:ColorMapEntry quantity="0.079549562783200023" color="#fbcf81" label="0.0795"/>
+              <sld:ColorMapEntry quantity="0.085083418750000028" color="#fcd082" label="0.0851"/>
+              <sld:ColorMapEntry quantity="0.090617274716800034" color="#fcd283" label="0.0906"/>
+              <sld:ColorMapEntry quantity="0.096152547441400005" color="#fcd484" label="0.0962"/>
+              <sld:ColorMapEntry quantity="0.10168640340820001" color="#fcd685" label="0.1017"/>
+              <sld:ColorMapEntry quantity="0.10722025937500002" color="#fcd786" label="0.1072"/>
+              <sld:ColorMapEntry quantity="0.11275411534180002" color="#fcd987" label="0.1128"/>
+              <sld:ColorMapEntry quantity="0.11828938806639999" color="#fcdb89" label="0.1183"/>
+              <sld:ColorMapEntry quantity="0.1238232440332" color="#fcdc8a" label="0.1238"/>
+              <sld:ColorMapEntry quantity="0.1293571" color="#fcde8b" label="0.1294"/>
+              <sld:ColorMapEntry quantity="0.13489095596680001" color="#fce08c" label="0.1349"/>
+              <sld:ColorMapEntry quantity="0.14042622869139998" color="#fce18d" label="0.1404"/>
+              <sld:ColorMapEntry quantity="0.1459600846582001" color="#fbe289" opacity="0.999863" label="0.1460"/>
+              <sld:ColorMapEntry quantity="0.15149394062499999" color="#f8e280" opacity="0.999619" label="0.1515"/>
+              <sld:ColorMapEntry quantity="0.1570277965918" color="#f5e278" opacity="0.999359" label="0.1570"/>
+              <sld:ColorMapEntry quantity="0.16256306931639997" color="#f3e36f" opacity="0.999115" label="0.1626"/>
+              <sld:ColorMapEntry quantity="0.16809692528320008" color="#f0e367" opacity="0.998871" label="0.1681"/>
+              <sld:ColorMapEntry quantity="0.17363078124999998" color="#ede35f" opacity="0.998611" label="0.1736"/>
+              <sld:ColorMapEntry quantity="0.17916463721679998" color="#ebe356" opacity="0.998367" label="0.1792"/>
+              <sld:ColorMapEntry quantity="0.18469990994139995" color="#e8e34e" opacity="0.998123" label="0.1847"/>
+              <sld:ColorMapEntry quantity="0.19023376590820007" color="#e5e345" opacity="0.997864" label="0.1902"/>
+              <sld:ColorMapEntry quantity="0.19576762187499996" color="#e2e33d" opacity="0.99762" label="0.1958"/>
+              <sld:ColorMapEntry quantity="0.20130147784179997" color="#e0e334" opacity="0.99736" label="0.2013"/>
+              <sld:ColorMapEntry quantity="0.20683675056639994" color="#dde42c" opacity="0.997116" label="0.2068"/>
+              <sld:ColorMapEntry quantity="0.21237060653320006" color="#dae424" opacity="0.996872" label="0.2124"/>
+              <sld:ColorMapEntry quantity="0.21790446249999995" color="#d8e41b" opacity="0.996612" label="0.2179"/>
+              <sld:ColorMapEntry quantity="0.22343831846679996" color="#d5e413" opacity="0.996368" label="0.2234"/>
+              <sld:ColorMapEntry quantity="0.22897359119139993" color="#d2e40a" opacity="0.996124" label="0.2290"/>
+              <sld:ColorMapEntry quantity="0.23450744715820004" color="#cfe409" opacity="0.996155" label="0.2345"/>
+              <sld:ColorMapEntry quantity="0.24004130312500005" color="#cce509" opacity="0.996231" label="0.2400"/>
+              <sld:ColorMapEntry quantity="0.24557515909179994" color="#c8e609" opacity="0.996307" label="0.2456"/>
+              <sld:ColorMapEntry quantity="0.25111043181639991" color="#c5e608" opacity="0.996399" label="0.2511"/>
+              <sld:ColorMapEntry quantity="0.25664428778320003" color="#c1e708" opacity="0.996475" label="0.2566"/>
+              <sld:ColorMapEntry quantity="0.26217814375000004" color="#bee708" opacity="0.996551" label="0.2622"/>
+              <sld:ColorMapEntry quantity="0.26771199971679993" color="#bae808" opacity="0.996643" label="0.2677"/>
+              <sld:ColorMapEntry quantity="0.2732472724413999" color="#b7e808" opacity="0.996719" label="0.2732"/>
+              <sld:ColorMapEntry quantity="0.27878112840820002" color="#b3e908" opacity="0.996796" label="0.2788"/>
+              <sld:ColorMapEntry quantity="0.28431498437500002" color="#b0ea07" opacity="0.996887" label="0.2843"/>
+              <sld:ColorMapEntry quantity="0.28984884034179992" color="#acea07" opacity="0.996963" label="0.2898"/>
+              <sld:ColorMapEntry quantity="0.2953841130664" color="#a9eb07" opacity="0.99704" label="0.2954"/>
+              <sld:ColorMapEntry quantity="0.30091796903320001" color="#a5eb07" opacity="0.997131" label="0.3009"/>
+              <sld:ColorMapEntry quantity="0.30645182500000001" color="#a2ec07" opacity="0.997208" label="0.3065"/>
+              <sld:ColorMapEntry quantity="0.31198568096680002" color="#9eec07" opacity="0.997284" label="0.3120"/>
+              <sld:ColorMapEntry quantity="0.31752095369139999" color="#9bed06" opacity="0.997375" label="0.3175"/>
+              <sld:ColorMapEntry quantity="0.3230548096582001" color="#97ed06" opacity="0.997452" label="0.3231"/>
+              <sld:ColorMapEntry quantity="0.328588665625" color="#94ee06" opacity="0.997543" label="0.3286"/>
+              <sld:ColorMapEntry quantity="0.3341225215918" color="#90ef06" opacity="0.99762" label="0.3341"/>
+              <sld:ColorMapEntry quantity="0.33965779431639997" color="#8def06" opacity="0.997696" label="0.3397"/>
+              <sld:ColorMapEntry quantity="0.34519165028320009" color="#89f006" opacity="0.997787" label="0.3452"/>
+              <sld:ColorMapEntry quantity="0.35072550624999999" color="#86f005" opacity="0.997864" label="0.3507"/>
+              <sld:ColorMapEntry quantity="0.35625936221679999" color="#82f105" opacity="0.99794" label="0.3563"/>
+              <sld:ColorMapEntry quantity="0.36179463494139996" color="#7ff105" opacity="0.998032" label="0.3618"/>
+              <sld:ColorMapEntry quantity="0.36732849090820008" color="#7bf205" opacity="0.998108" label="0.3673"/>
+              <sld:ColorMapEntry quantity="0.37286234687499997" color="#78f305" opacity="0.998184" label="0.3729"/>
+              <sld:ColorMapEntry quantity="0.37839620284179998" color="#74f305" opacity="0.998276" label="0.3784"/>
+              <sld:ColorMapEntry quantity="0.38393147556639995" color="#71f404" opacity="0.998352" label="0.3839"/>
+              <sld:ColorMapEntry quantity="0.38946533153320007" color="#6df404" opacity="0.998428" label="0.3895"/>
+              <sld:ColorMapEntry quantity="0.39499918750000007" color="#6af504" opacity="0.99852" label="0.3950"/>
+              <sld:ColorMapEntry quantity="0.40053304346679997" color="#66f504" opacity="0.998596" label="0.4005"/>
+              <sld:ColorMapEntry quantity="0.40606831619139994" color="#63f604" opacity="0.998688" label="0.4061"/>
+              <sld:ColorMapEntry quantity="0.41160217215820005" color="#5ff604" opacity="0.998764" label="0.4116"/>
+              <sld:ColorMapEntry quantity="0.41713602812500006" color="#5cf703" opacity="0.99884" label="0.4171"/>
+              <sld:ColorMapEntry quantity="0.42266988409179995" color="#58f803" opacity="0.998932" label="0.4227"/>
+              <sld:ColorMapEntry quantity="0.42820515681640003" color="#55f803" opacity="0.999008" label="0.4282"/>
+              <sld:ColorMapEntry quantity="0.43373901278320015" color="#51f903" opacity="0.999084" label="0.4337"/>
+              <sld:ColorMapEntry quantity="0.43927286875000005" color="#4ef903" opacity="0.999176" label="0.4393"/>
+              <sld:ColorMapEntry quantity="0.44480672471679994" color="#4afa03" opacity="0.999252" label="0.4448"/>
+              <sld:ColorMapEntry quantity="0.45034199744140002" color="#47fa02" opacity="0.999329" label="0.4503"/>
+              <sld:ColorMapEntry quantity="0.45587585340820014" color="#43fb02" opacity="0.99942" label="0.4559"/>
+              <sld:ColorMapEntry quantity="0.46140970937500003" color="#40fc02" opacity="0.999496" label="0.4614"/>
+              <sld:ColorMapEntry quantity="0.46694356534179993" color="#3cfc02" opacity="0.999573" label="0.4669"/>
+              <sld:ColorMapEntry quantity="0.47247883806640001" color="#39fd02" opacity="0.999664" label="0.4725"/>
+              <sld:ColorMapEntry quantity="0.47801269403320013" color="#35fd02" opacity="0.999741" label="0.4780"/>
+              <sld:ColorMapEntry quantity="0.48354655000000002" color="#32fe01" opacity="0.999817" label="0.4835"/>
+              <sld:ColorMapEntry quantity="0.48908040596679991" color="#2efe01" opacity="0.999908" label="0.4891"/>
+              <sld:ColorMapEntry quantity="0.4946156786914" color="#2bff01" opacity="0.999985" label="0.4946"/>
+              <sld:ColorMapEntry quantity="0.50014953465820011" color="#2afc01" label="0.5001"/>
+              <sld:ColorMapEntry quantity="0.50568339062500001" color="#29f901" label="0.5057"/>
+              <sld:ColorMapEntry quantity="0.5112172465917999" color="#29f501" label="0.5112"/>
+              <sld:ColorMapEntry quantity="0.51675251931639998" color="#29f201" label="0.5168"/>
+              <sld:ColorMapEntry quantity="0.5222863752832001" color="#29ee02" label="0.5223"/>
+              <sld:ColorMapEntry quantity="0.52782023124999999" color="#28eb02" label="0.5278"/>
+              <sld:ColorMapEntry quantity="0.53335408721679989" color="#28e702" label="0.5334"/>
+              <sld:ColorMapEntry quantity="0.53888935994139997" color="#28e402" label="0.5389"/>
+              <sld:ColorMapEntry quantity="0.54442321590820009" color="#28e002" label="0.5444"/>
+              <sld:ColorMapEntry quantity="0.54995707187499998" color="#27dd02" label="0.5500"/>
+              <sld:ColorMapEntry quantity="0.55549092784179988" color="#27d902" label="0.5555"/>
+              <sld:ColorMapEntry quantity="0.56102620056639996" color="#27d602" label="0.5610"/>
+              <sld:ColorMapEntry quantity="0.56656005653320007" color="#26d202" label="0.5666"/>
+              <sld:ColorMapEntry quantity="0.57209391249999997" color="#26cf03" label="0.5721"/>
+              <sld:ColorMapEntry quantity="0.57762776846680008" color="#26cb03" label="0.5776"/>
+              <sld:ColorMapEntry quantity="0.58316304119139994" color="#26c803" label="0.5832"/>
+              <sld:ColorMapEntry quantity="0.58869689715820006" color="#25c403" label="0.5887"/>
+              <sld:ColorMapEntry quantity="0.59423075312499996" color="#25c103" label="0.5942"/>
+              <sld:ColorMapEntry quantity="0.59976460909180007" color="#25bd03" label="0.5998"/>
+              <sld:ColorMapEntry quantity="0.60529988181639993" color="#25ba03" label="0.6053"/>
+              <sld:ColorMapEntry quantity="0.61083373778320005" color="#24b703" label="0.6108"/>
+              <sld:ColorMapEntry quantity="0.61636759374999994" color="#24b303" label="0.6164"/>
+              <sld:ColorMapEntry quantity="0.62190144971680006" color="#24b004" label="0.6219"/>
+              <sld:ColorMapEntry quantity="0.62743672244139992" color="#23ac04" label="0.6274"/>
+              <sld:ColorMapEntry quantity="0.63297057840820004" color="#23a904" label="0.6330"/>
+              <sld:ColorMapEntry quantity="0.63850443437499993" color="#23a504" label="0.6385"/>
+              <sld:ColorMapEntry quantity="0.64403829034180005" color="#23a204" label="0.6440"/>
+              <sld:ColorMapEntry quantity="0.64957356306639991" color="#229e04" label="0.6496"/>
+              <sld:ColorMapEntry quantity="0.65510741903320002" color="#229b04" label="0.6551"/>
+              <sld:ColorMapEntry quantity="0.66064127500000014" color="#229704" label="0.6606"/>
+              <sld:ColorMapEntry quantity="0.66617513096680003" color="#229404" label="0.6662"/>
+              <sld:ColorMapEntry quantity="0.67171040369139989" color="#219005" label="0.6717"/>
+              <sld:ColorMapEntry quantity="0.67724425965820001" color="#218d05" label="0.6772"/>
+              <sld:ColorMapEntry quantity="0.68277811562500013" color="#218905" label="0.6828"/>
+              <sld:ColorMapEntry quantity="0.68831197159180002" color="#208605" label="0.6883"/>
+              <sld:ColorMapEntry quantity="0.69384724431639988" color="#208205" label="0.6938"/>
+              <sld:ColorMapEntry quantity="0.6993811002832" color="#207f05" label="0.6994"/>
+              <sld:ColorMapEntry quantity="0.70491495625000011" color="#207b05" label="0.7049"/>
+              <sld:ColorMapEntry quantity="0.71044881221680001" color="#1f7805" label="0.7104"/>
+              <sld:ColorMapEntry quantity="0.71598408494139987" color="#1f7405" label="0.7160"/>
+              <sld:ColorMapEntry quantity="2.0" color="#1f7106" label="0.7215"/>
+              
+              
+            </sld:ColorMap>
+          </sld:RasterSymbolizer>
+        </sld:Rule></sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</sld:StyledLayerDescriptor>

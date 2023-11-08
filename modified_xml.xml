@@ -1,0 +1,37 @@
+<ns0:StyledLayerDescriptor xmlns:ns0="http://www.opengis.net/sld" xmlns:ns1="http://www.opengis.net/ogc" version="1.0.0">
+  <ns0:NamedLayer>
+    <ns0:Name>land_cover</ns0:Name>
+    <ns0:UserStyle>
+      <ns0:Name>land_cover</ns0:Name>
+      <ns0:FeatureTypeStyle>
+        <ns0:Name>name</ns0:Name>
+        <ns0:Transformation>
+  <ns1:Function name="gs:CropCoverage">
+        <ns1:Function name="parameter">
+          <ns1:Literal>coverage</ns1:Literal>
+        </ns1:Function>
+        <ns1:Function name="parameter">
+          <ns1:Literal>cropShape</ns1:Literal>
+          <ns1:Literal>wkt_polygon2</ns1:Literal>
+        </ns1:Function>
+  </ns1:Function>
+  </ns0:Transformation>
+<ns0:Rule>
+          <ns0:RasterSymbolizer>
+            <ns0:ChannelSelection>
+              <ns0:GrayChannel>
+                <ns0:SourceChannelName>1</ns0:SourceChannelName>
+              </ns0:GrayChannel>
+            </ns0:ChannelSelection>
+            <ns0:ColorMap type="values">
+              <ns0:ColorMapEntry color="#ef1a07" quantity="1" label="Flooded Areas" />
+              <ns0:ColorMapEntry color="#dc8966" quantity="2" label="Wetness" />
+              <ns0:ColorMapEntry color="#eae7af" quantity="3" label="Moderate Wetness" />
+              <ns0:ColorMapEntry color="#c8ce17" quantity="4" label="Moderate Dryness" />
+              <ns0:ColorMapEntry color="#2bb53a" quantity="5" label="Dry Areas" />
+            </ns0:ColorMap>
+          </ns0:RasterSymbolizer>
+        </ns0:Rule></ns0:FeatureTypeStyle>
+    </ns0:UserStyle>
+  </ns0:NamedLayer>
+</ns0:StyledLayerDescriptor>

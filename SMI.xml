@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" version="1.0.0">
+  <sld:NamedLayer>
+    <sld:Name>land_cover</sld:Name>
+    <sld:UserStyle>
+      <sld:Name>land_cover</sld:Name>
+      <sld:FeatureTypeStyle>
+        <sld:Name>name</sld:Name>
+        <Transformation>
+  <ogc:Function name="gs:CropCoverage">
+        <ogc:Function name="parameter">
+          <ogc:Literal>coverage</ogc:Literal>
+        </ogc:Function>
+        <ogc:Function name="parameter">
+          <ogc:Literal>cropShape</ogc:Literal>
+          <ogc:Literal>{{wkt_polygon2}}</ogc:Literal>
+        </ogc:Function>
+  </ogc:Function>
+  </Transformation>
+<sld:Rule>
+          <sld:RasterSymbolizer>
+            <sld:ChannelSelection>
+              <sld:GrayChannel>
+                <sld:SourceChannelName>1</sld:SourceChannelName>
+              </sld:GrayChannel>
+            </sld:ChannelSelection>
+             <sld:ColorMap type="intervals">
+              <sld:ColorMapEntry label="&lt;= 0.0021" color="#d7191c" quantity="0.0021056661562021436"/>
+              <sld:ColorMapEntry label="0.0021 - 0.0123" color="#e85b3b" quantity="0.012340479836651352"/>
+              <sld:ColorMapEntry label="0.0123 - 0.0316" color="#f99d59" quantity="0.031641508058047108"/>
+              <sld:ColorMapEntry label="0.0316 - 0.0681" color="#fec981" quantity="0.06813607525705534"/>
+              <sld:ColorMapEntry label="0.0681 - 0.1446" color="#ffedab" quantity="0.14457813753372711"/>
+              <sld:ColorMapEntry label="0.1446 - 0.2269" color="#ebf7ad" quantity="0.22686866477065556"/>
+              <sld:ColorMapEntry label="0.2269 - 0.3597" color="#c4e687" quantity="0.3597498723838693"/>
+              <sld:ColorMapEntry label="0.3597 - 0.5182" color="#96d265" quantity="0.51818894479690802"/>
+              <sld:ColorMapEntry label="0.5182 - 0.6326" color="#58b453" quantity="0.63258769051265218"/>
+              <sld:ColorMapEntry label="> 0.6326" color="#1a9641" quantity="1.0"/>
+            </sld:ColorMap>
+          </sld:RasterSymbolizer>
+        </sld:Rule></sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</sld:StyledLayerDescriptor>

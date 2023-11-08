@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" version="1.0.0">
+  <sld:NamedLayer>
+    <sld:Name>land_cover</sld:Name>
+    <sld:UserStyle>
+      <sld:Name>land_cover</sld:Name>
+      <sld:FeatureTypeStyle>
+        <sld:Name>name</sld:Name>
+        <Transformation>
+  <ogc:Function name="gs:CropCoverage">
+        <ogc:Function name="parameter">
+          <ogc:Literal>coverage</ogc:Literal>
+        </ogc:Function>
+        <ogc:Function name="parameter">
+          <ogc:Literal>cropShape</ogc:Literal>
+          <ogc:Literal>{{wkt_polygon2}}</ogc:Literal>
+  </ogc:Function>
+  </ogc:Function>
+  </Transformation>
+<sld:Rule>
+          <sld:RasterSymbolizer>
+            <sld:ChannelSelection>
+              <sld:GrayChannel>
+                <sld:SourceChannelName>1</sld:SourceChannelName>
+              </sld:GrayChannel>
+            </sld:ChannelSelection>
+            <sld:ColorMap type="values">
+              <sld:ColorMapEntry label="Agriculture" quantity="1" color="#a8a800"/>
+              <sld:ColorMapEntry label="Forest" quantity="2" color="#2b8311"/>
+              <sld:ColorMapEntry label="Grassland" quantity="3" color="#ffebbe"/>
+              <sld:ColorMapEntry label="Wetland" quantity="4" color="#bee8ff"/>
+              <sld:ColorMapEntry label="Built-Up" quantity="5" color="#a1261b"/>
+              <sld:ColorMapEntry label="Shubland" quantity="6" color="#55ff00"/>
+              <sld:ColorMapEntry label="Bareland" quantity="7" color="#cccccc"/>
+              <sld:ColorMapEntry label="Water" quantity="8" color="#00c5ff"/>
+            </sld:ColorMap>
+          </sld:RasterSymbolizer>
+        </sld:Rule></sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</sld:StyledLayerDescriptor>

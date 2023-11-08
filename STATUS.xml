@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" version="1.0.0">
+  <sld:NamedLayer>
+    <sld:Name>land_cover</sld:Name>
+    <sld:UserStyle>
+      <sld:Name>land_cover</sld:Name>
+      <sld:FeatureTypeStyle>
+        <sld:Name>name</sld:Name>
+        <Transformation>
+  <ogc:Function name="gs:CropCoverage">
+        <ogc:Function name="parameter">
+          <ogc:Literal>coverage</ogc:Literal>
+        </ogc:Function>
+        <ogc:Function name="parameter">
+          <ogc:Literal>cropShape</ogc:Literal>
+          <ogc:Literal>{{wkt_polygon2}}</ogc:Literal>
+        </ogc:Function>
+  </ogc:Function>
+  </Transformation>
+<sld:Rule>
+          <sld:RasterSymbolizer>
+            <sld:ChannelSelection>
+              <sld:GrayChannel>
+                <sld:SourceChannelName>1</sld:SourceChannelName>
+              </sld:GrayChannel>
+            </sld:ChannelSelection>
+            <sld:ColorMap type="intervals">
+              <sld:ColorMapEntry color="#0cefef" quantity="0.0" label="Water Areas"/>
+              <sld:ColorMapEntry color="#d2e409" quantity="0.3" label="Dry Areas"/>
+              <sld:ColorMapEntry color="#1eb301" quantity="1.0" label="Wetness Areas"/>
+         
+            </sld:ColorMap>
+          </sld:RasterSymbolizer>
+        </sld:Rule></sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</sld:StyledLayerDescriptor>
