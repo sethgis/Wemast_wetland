@@ -126,7 +126,7 @@ async def generate_sld(wetland: Wetland, indicator: Indicator):
 
 
 
-        # creating a random number and save the new XML file in the working directory
+        # Create a random number and save the new XML file in the working directory
 
         new_xml = re.sub(r'{{wkt_polygon2}}', variable, xml_contents)
 
@@ -147,6 +147,10 @@ async def generate_sld(wetland: Wetland, indicator: Indicator):
 
       
         return {"message": "SLD file generated and uploaded successfully", "sld_file_path": base_sld}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
        
 
