@@ -1,23 +1,15 @@
 
 from fastapi import FastAPI
-import requests
-import geopandas as gpd
 from shapely.geometry import box
 from shapely import wkt
 from shapely.wkt import dumps
-from shapely.geometry import Polygon
-from shapely.geometry import box
-import xml.etree.ElementTree as ET
-from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import geopandas as gpd
 import xml.etree.ElementTree as ET
 import re
 import random
-import shutil
-from lxml import etree
+# import shutil
+# from lxml import etree
 from geo.Geoserver import Geoserver
-from shapely.geometry import Polygon, MultiPolygon
 import os
 
 
@@ -137,7 +129,7 @@ async def generate_sld(wetland: Wetland, indicator: Indicator):
         with open(base_sld, 'w') as sld_file:
             sld_file.write(new_xml)
 
-        saved_file_path = os.path.abspath(base_sld)
+        saved_file_path = base_sld
 
         path = str(saved_file_path)
 
@@ -149,18 +141,5 @@ async def generate_sld(wetland: Wetland, indicator: Indicator):
         return {"message": "SLD file generated and uploaded successfully", "sld_file_path": base_sld}
 
 
+
        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
