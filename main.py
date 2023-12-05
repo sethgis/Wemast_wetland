@@ -148,7 +148,7 @@ async def generate_sld(wetland: Wetland, indicator: Indicator):
 
         path = str(saved_file_path)
 
-        geo = Geoserver('http://geoserver:8080/geoserver', username='wemast', password='wemast3582')
+     
 
         geo.upload_style(path=(path))
 
